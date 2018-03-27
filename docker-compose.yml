@@ -1,0 +1,7 @@
+version: '2'
+services:
+  app:
+    container_name: apache2_php7_xdebug_phpunit
+    build: .
+    ports:
+      - 127.0.0.1:4080:80

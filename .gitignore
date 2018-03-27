@@ -1,0 +1,7 @@
+.settings/
+.buildpath
+.project
+.vscode/
+www/
+shared/
+test/
