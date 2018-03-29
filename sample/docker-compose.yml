@@ -16,9 +16,9 @@ services:
     image: phpmyadmin/phpmyadmin
     environment:
      - PMA_ARBITRARY=1
-     - PMA_HOST=ketmie_mysql
-     - PMA_USER=ketmieuser
-     - PMA_PASSWORD=k3tM1aDm1n
+     - PMA_HOST=dev-lamp-stack-db
+     - PMA_USER=dbuser
+     - PMA_PASSWORD=dbuserpwd
     ports:
       - 4081:80
     links:
