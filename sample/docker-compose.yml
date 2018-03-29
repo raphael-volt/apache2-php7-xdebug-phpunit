@@ -2,7 +2,7 @@ version: '2'
 services:
   app:
     container_name: dev-lamp-stack
-    image: localhost:5000/data/apache2_php7_xdebug_phpunit:latest
+    image: rvolt/apache2-php7-xdebug-phpunit:latest
     ports:
       - 4080:80
     environment:
