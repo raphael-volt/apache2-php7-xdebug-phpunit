@@ -3,7 +3,6 @@ FROM php:7-apache
 LABEL maintainer "Raphaël Volt <raphael@ketmie.com>"
 
 RUN apt-get update && apt-get install -y \
-    gettext \
     bzip2 \
     libbz2-dev \
     libcurl4-openssl-dev \
@@ -22,7 +21,6 @@ RUN curl -fsSL https://getcomposer.org/installer | php \
 # Install php extensions
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install bz2
-RUN docker-php-ext-install gettext
 RUN docker-php-ext-install opcache
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install pcntl
@@ -47,15 +45,16 @@ RUN a2enmod ssl
 RUN a2ensite default-ssl
 RUN openssl req -subj '/CN=example.com/O=My Company Name LTD./C=US' -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout /etc/ssl/private/ssl-cert-snakeoil.key -out /etc/ssl/certs/ssl-cert-snakeoil.pem
 
-# Shared volume
-COPY shared /shared
-COPY shared/config/xdebug.core.ini /usr/local/etc/php/conf.d/xdebug.core.ini
-COPY www/phpinfo.php /var/www/html/phpinfo.php
-COPY www/specs /var/www/html/specs
+# xdebug configuration
+COPY shared/xdebug.core.ini /usr/local/etc/php/conf.d/xdebug.core.ini
+
+# Test watcher
+RUN mkdir /shared
+COPY shared/watch.phpunit.sh /shared
+RUN chmod u+x,g+x /shared/watch.phpunit.sh
+RUN echo "alias watch-phpunit='/shared/watch.phpunit.sh'" >> /root/.bashrc
 
 # Change file mod and owner
 RUN usermod -u 1000 www-data
-RUN chown -R www-data:www-data /var/www/html/
-RUN chmod -R 0775 /var/www/html/
-RUN chown -R www-data:www-data /shared
-RUN chmod -R 0775 /shared
+RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 0775 /var/www/html
