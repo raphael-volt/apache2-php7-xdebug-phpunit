@@ -1,0 +1,40 @@
+version: '2'
+services:
+  app:
+    container_name: dev-lamp-stack
+    image: localhost:5000/data/apache2_php7_xdebug_phpunit:latest
+    ports:
+      - 4080:80
+    environment:
+      XDEBUG_CONFIG: remote_host=192.168.1.19
+    volumes:
+      - ./www:/var/www/html:rw
+    depends_on:
+      - pma
+  pma:
+    container_name: dev-lamp-stack-pma
+    image: phpmyadmin/phpmyadmin
+    environment:
+     - PMA_ARBITRARY=1
+     - PMA_HOST=ketmie_mysql
+     - PMA_USER=ketmieuser
+     - PMA_PASSWORD=k3tM1aDm1n
+    ports:
+      - 4081:80
+    links:
+      - db
+    depends_on:
+      - db
+    restart: 'no'
+  db:
+    container_name: dev-lamp-stack-db
+    image: mysql:5.5
+    ports:
+      - 4082:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpwd
+      - MYSQL_DATABASE=sample_db  
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbuserpwd
+    restart: 'no'
+  
