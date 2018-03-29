@@ -1,2 +1,4 @@
-apache-php7-xdebug-phpunit:
-  build: .
+version: '2'
+services:
+  server:
+    build: .
