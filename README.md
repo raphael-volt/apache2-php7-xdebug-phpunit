@@ -44,44 +44,39 @@ See [sample](sample/) directory for a basic example.
 
 Preferences > PHP > Debug > Debuggers 
 
-![alt text](doc/img/conf.debuggers.png)
+![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.debuggers.png)
 
 ### Edit configuration ###
 
-![alt text](doc/img/conf.xdebug.png)
+![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.xdebug.png)
 
 ## Servers ##
 
 Preferences > PHP > Servers
 
-![alt text](doc/img/conf.servers.png)
+![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.servers.png)
 
 ### Create your server ###
 
-![alt text](doc/img/conf.new-server.png)
+![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.new-server.png)
 
 ### Configure debugger ###
 
-![alt text](doc/img/conf.server-debugger.png)
+![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.server-debugger.png)
 
 ### Configure path mapping ###
 
-![alt text](doc/img/conf.server-pathmapping.png)
+![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.server-pathmapping.png)
 
 ## Debbug configurations
 
 Run > Debbug Configurations...
 
-![alt text](doc/img/debug.config.png)
+![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/debug.config.png)
 
 ### Create a new `PHP Web Application` configuration
 
-![alt text](doc/img/debug.config.png)
-
-### Configure server ###
-
-![alt text](doc/img/debug.new-config.png)
+![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/debug.new-config.png)
 
 ### Disable `Break at first line` option
-
-![alt text](doc/img/debug.disable-break-first-line.png)
+![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/debug.disable-break-first-line.png)
