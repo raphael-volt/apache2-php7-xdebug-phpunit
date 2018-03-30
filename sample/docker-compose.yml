@@ -6,7 +6,7 @@ services:
     ports:
       - 4080:80
     environment:
-      XDEBUG_CONFIG: remote_host=<HOST_IP>
+      XDEBUG_CONFIG: remote_host=172.17.0.1
     volumes:
       - ./www:/var/www/html:rw
     depends_on:

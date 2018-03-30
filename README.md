@@ -19,22 +19,6 @@ watch-phpunit -c specs/suite.xml
 
 ## Usage ##
 
-The `xdebug.remote_host` must be set:
-
-```bash
-# Get host IP
-hostname -I | awk '{print $1}'
-```
-
-- with `php.ini`
-    ```ini
-    xdebug.remote_host=<HOST_IP>
-    ```
-- with `docker-compose`
-    ```yml
-    environment:
-        XDEBUG_CONFIG: remote_host=<HOST_IP>
-    ```
 
 See [sample](sample/) directory for a basic example.
 
