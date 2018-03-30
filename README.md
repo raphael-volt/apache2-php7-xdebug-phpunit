@@ -22,6 +22,11 @@ watch-phpunit -c specs/suite.xml
 
 See [sample](sample/) directory for a basic example.
 
+Run sample tests on files changes :
+
+    $ cd sample
+    $ docker-compose run --rm test
+
 # Eclipse PDT configuration #
 
 ## xdebug ##
