@@ -26,41 +26,54 @@ See [sample](sample/) directory for a basic example.
 
 ## xdebug ##
 
-Preferences > PHP > Debug > Debuggers 
+Window > Preferences > PHP > Debug > Debuggers 
 
 ![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.debuggers.png)
 
 ### Edit configuration ###
 
+Select XDebug and configure it as follows :
+
 ![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.xdebug.png)
 
 ## Servers ##
 
-Preferences > PHP > Servers
+Window > Preferences > PHP > Servers
 
 ![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.servers.png)
 
 ### Create your server ###
 
+Press New, configure your server as follows (adapt your document root path) and press Next.
+
 ![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.new-server.png)
 
 ### Configure debugger ###
+
+Select XDebug, configure as follows and press Next.
 
 ![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.server-debugger.png)
 
 ### Configure path mapping ###
 
+Add the following path mapping (adapt your project path) then press Finish and "Apply and Close".
+
 ![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/conf.server-pathmapping.png)
 
-## Debbug configurations
+## Debug configurations
 
-Run > Debbug Configurations...
+Run > Debug Configurations...
 
 ![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/debug.config.png)
 
 ### Create a new `PHP Web Application` configuration
 
+Configure Server tab as follows :
+
 ![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/debug.new-config.png)
 
 ### Disable `Break at first line` option
+
+Configure Debugger tab as follows and press Debug to start the debugger.
+
 ![alt text](https://github.com/raphael-volt/apache2-php7-xdebug-phpunit/raw/master/doc/img/debug.disable-break-first-line.png)
