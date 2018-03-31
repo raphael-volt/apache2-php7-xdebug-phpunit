@@ -37,4 +37,11 @@ services:
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=dbuserpwd
     restart: 'no'
-  
+  test:
+    container_name: dev-lamp-stack-test
+    image: rvolt/apache2-php7-xdebug-phpunit:latest
+    command: '/shared/watch.phpunit.sh -c specs/suite.xml'
+    environment:
+      XDEBUG_CONFIG: remote_host=172.17.0.1
+    volumes:
+      - ./www:/var/www/html:rw
